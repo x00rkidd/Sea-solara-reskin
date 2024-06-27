@@ -1,0 +1,155 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local Source = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local Execute = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local UICorner_4 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.113879003, 0, 0.0977187902, 0)
+Main.Size = UDim2.new(0, 648, 0, 361)
+
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 278, 0, 232)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0863309354, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 168, 0, 36)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Sea"
+TextLabel.TextColor3 = Color3.fromRGB(6, 23, 255)
+TextLabel.TextSize = 33.000
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Size = UDim2.new(0, 70, 0, 36)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=18234852721"
+
+Source.Name = "Source"
+Source.Parent = Frame
+Source.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Source.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Source.BorderSizePixel = 0
+Source.Position = UDim2.new(1, 0, 0.172413796, 0)
+Source.Size = UDim2.new(0, 342, 0, 259)
+Source.Font = Enum.Font.SourceSans
+Source.MultiLine = true
+Source.PlaceholderText = "-- Script Here"
+Source.Text = ""
+Source.TextColor3 = Color3.fromRGB(9, 156, 139)
+Source.TextSize = 14.000
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner.Parent = Source
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(8, 35, 38)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.158273384, 0, 0.172413796, 0)
+TextLabel_2.Size = UDim2.new(0, 225, 0, 233)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Hi! im SeaAI. You can refer to your code as \"my code\"."
+TextLabel_2.TextColor3 = Color3.fromRGB(25, 244, 255)
+TextLabel_2.TextSize = 11.000
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+Execute.Name = "Execute"
+Execute.Parent = Frame
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(1.44604313, 0, 1.31465518, 0)
+Execute.Size = UDim2.new(0, 200, 0, 50)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextSize = 14.000
+
+UICorner_2.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = Frame
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.140287772, 0, 1.31465518, 0)
+Clear.Size = UDim2.new(0, 200, 0, 50)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+Clear.TextSize = 14.000
+
+UICorner_3.Parent = Clear
+
+UIListLayout.Parent = Main
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+UICorner_4.Parent = Main
+
+Frame_2.Parent = ScreenGui
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.35320285, 0, 0.127191737, 0)
+Frame_2.Size = UDim2.new(0, 351, 0, 1)
+
+-- Scripts:
+
+local function BWZAUR_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(script.Parent.Parent.Source.Text)()
+	end)
+end
+coroutine.wrap(BWZAUR_fake_script)()
+local function CNUN_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Source.Text = ''
+	end)
+	
+end
+coroutine.wrap(CNUN_fake_script)()
+local function VOWUN_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(VOWUN_fake_script)()
